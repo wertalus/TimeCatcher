@@ -14,13 +14,13 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    <!--@vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
-    
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="text" href="{{ asset('css/sidebars.css') }}">
     
-    <!-- @vite(['resources/css/sidebars.css', 'resources/js/sidebars.js'])-->
-    
-    <link rel="text" href="{{ asset('css/sidebars.css') }}"> 
+    <!-- @vite(['resources/css/sidebars.css', 'resources/js/sidebars.js']) -->
+    <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
+
     
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
@@ -50,6 +50,7 @@
     @endif
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/sidebars.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 </body>
 <livewire:scripts>
     <script>
