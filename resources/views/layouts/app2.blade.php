@@ -15,12 +15,12 @@
     
 
     <!-- Scripts -->
-    <!--@vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <!-- @vite(['resources/css/sidebars.css', 'resources/js/sidebars.js'])-->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="text" href="{{ asset('css/sidebars.css') }}">
     
-    <link rel="text" href="{{ asset('css/sidebars.css') }}"> 
+    <!-- @vite(['resources/css/sidebars.css', 'resources/js/sidebars.js']) -->
+    <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
 
 <body>
