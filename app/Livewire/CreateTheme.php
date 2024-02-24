@@ -7,6 +7,7 @@ use Livewire\Component;
 use Request;
 use Livewire\Attributes\Validate;
 use Livewire\Attributes\Rule;
+use Livewire\Attributes\Layout;
 
 
 class CreateTheme extends Component
@@ -67,7 +68,7 @@ class CreateTheme extends Component
         return redirect()->to("/create-theme/$this->theme_name")->with('message', 'Zapisano zmiany !');
 
     }
-
+    #[Layout('layouts.main2')]
     public function render()
     {
         return view('livewire.create-theme');

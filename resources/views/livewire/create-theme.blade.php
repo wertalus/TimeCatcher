@@ -4,7 +4,7 @@
             <div class="card-header">
                 {{$theme_name}}
             </div>
-            <form class="card-body row g-3 d-flex justify-content-evenly" autocomplete="off" wire:submit.prevent='AddTask'>
+            <form class="card-body row g-3 d-flex justify-content-evenly" autocomplete="off" wire:submit='AddTask'>
                 <div class="col-auto text-align-middle">
                     <label for="action_id" class="form-label mt-2">ID czynności:</label>
                 </div>
@@ -38,8 +38,10 @@
                     <td>{{$item->action_id}}</td>
                     <td>{{$item->action_name}}</td>
                     <td class="d-flex justify-content-between">
-                        <button class="btn btn-danger">Usuń</button>
-                        <button wire:click.prevent='EditTask({{$item}})' class="btn btn-secondary">Edytuj</button>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button class="btn btn-danger">Usuń</button>
+                            <button wire:click.prevent='EditTask({{$item}})' class="btn btn-secondary">Edytuj</button>
+                        </div>
                     </td>
                     @empty
                         <td>Nie ma zadnych czynności</td>
@@ -73,10 +75,5 @@
             </div>
         </div>
 </div>
-<script type="text/javascript"> 
-    window.onbeforeunload = function() {
-        console.log("Message");
-        return "If you exit this page you will lose your data!";
-    }
-</script>
+
 

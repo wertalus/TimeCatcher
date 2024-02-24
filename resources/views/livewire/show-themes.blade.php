@@ -14,9 +14,11 @@
               <td>{{$item->id}}</td>
               <td>{{$item->theme_name}}</td>
               <td>
-                <button class="btn btn-danger">Usuń</button>
-                <button wire:click="EditTheme('{{$item->theme_name}}')" class="btn btn-secondary">Edytuj</button>
-                <a href="{{route('counter',['id'=>$item->id])}}" class="btn btn-info">Wybierz</a>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button class="btn btn-danger">Usuń</button>
+                  <button wire:click="EditTheme('{{$item->theme_name}}')" class="btn btn-secondary">Edytuj</button>
+                  <a href="{{route('counter',['id'=>$item->id])}}" class="btn btn-info">Wybierz</a>
+                </div>
               </td>
           @empty
               <td>Nie ma zadnych szablonów</td>

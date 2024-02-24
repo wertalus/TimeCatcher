@@ -235,7 +235,7 @@ class TimeCatcher extends Component
         $this->btnDecrease = 'enabled';
     }
 
-    #[Layout('layouts.main')]
+    #[Layout('layouts.main2')]
     public function render()
     {
         return view('livewire.time-catcher');

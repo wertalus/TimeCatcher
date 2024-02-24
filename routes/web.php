@@ -5,6 +5,7 @@ use App\Livewire\Dashboard;
 use App\Livewire\NewTheme;
 use App\Livewire\ShowThemes;
 use App\Livewire\TimeCatcher;
+use App\Livewire\CreateTheme;
 
 
 /*
@@ -26,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/themes', [App\Http\Controllers\DashboardController::class, 'index'])->name('themes')->middleware('auth');
-Route::get('/create-theme/{theme_name?}', [App\Http\Controllers\CreateTheme::class, 'index'])->name('new-theme')->middleware('auth');
+Route::get('/create-theme/{theme_name?}', CreateTheme::class)->name('new-theme')->middleware('auth');
 Route::get('/themes-list', ShowThemes::class)->name('theme-list')->middleware('auth');
 Route::get('/time-catcher/{id}', TimeCatcher::class)->name('counter')->middleware('auth');
 

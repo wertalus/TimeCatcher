@@ -1,6 +1,6 @@
-<div class='container-fluid'>
-    <div class="row">
-        <div class="card ms-3 p-0 col-10" style="">
+
+    <div class="row p-0">
+        <div class="card ms-3 p-0 col" style="">
             <div class="card-header text-center">
                 {{$theme[0]->theme_name}}
                 <button class="btn btn-secondary {{$btnStatus1}}" wire:click='StartTimer'>Start zegarów</button>
@@ -10,6 +10,7 @@
                 <button class="btn btn-secondary" wire:click='ShowTimers'>Pokaz pomiary</button>
             </div>
             <div class="card-body">
+                <div class="table-responsive">
                 <table class="table">
                     <thead>
                       <tr class="card-header">
@@ -23,8 +24,8 @@
                       <tr>
                         <td class="col-1 text-center">
                             {{$item->action_id}}</td>
-                        <td class="col-3">
-                            <button class="btn btn-secondary" wire:click="CheckPointTime('{{$item->action_name}}')" style="width: 30rem">
+                        <td class="col-sm-5">
+                            <button class="btn btn-secondary col-12" wire:click="CheckPointTime('{{$item->action_name}}')">
                                 {{$item->action_name}}
                             </button>
                         </td>
@@ -47,9 +48,10 @@
                       </tr>
                     </tbody>
                   </table>
+                </div>
             </div>
         </div>
-        <div class="card ms-3 p-0 col" style="">
+        <div class="card ms-1 p-0 col col-md-3" style="">
             <div class="card-header text-center">
                 Ustawienia
             </div>
@@ -59,16 +61,13 @@
                        Dodaj zegar
                     </span>
                 </div>
-                <div class="row justify-content-around">
-                    <div class="col">
-                        <button class="btn btn-secondary {{$btnDecrease}}" wire:click.prevent='decrease' style="width:35px">-</button>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control text-center" style="width:60px" readonly value="{{$no_persons}}">
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-secondary {{$btnIncrease}}" wire:click.prevent='increase' style="width:35px">+</button>
-                    </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary {{$btnDecrease}}" wire:click.prevent='decrease' style="width:35px">-</button>
+
+                    <input type="text" class="form-control text-center" style="width:60px" readonly value="{{$no_persons}}">
+
+                    <button class="btn btn-secondary {{$btnIncrease}}" wire:click.prevent='increase' style="width:35px">+</button>
+                </div>
                     @if($no_persons>0)
                         @foreach ($timers as $key => $value)
                             <div class="row my-2 px-4">
@@ -76,7 +75,6 @@
                             </div>
                         @endforeach
                     @endif
-                </div>
             </div>
             @if (session('start-ok'))
             <div class="alert text-center alert-success mx-2 my-2">
@@ -90,4 +88,4 @@
             @endif
         </div>
     </div>
-</div>
+
