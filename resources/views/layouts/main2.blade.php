@@ -28,7 +28,10 @@
 </head>
 <body>
     <div id="app">
-        <livewire:navbar/>
+        <div class="row">
+
+            <livewire:navbar/>
+        </div>
         <livewire:sidebar/>
         <main class="py-4">    
             {{$slot}}
@@ -49,6 +52,8 @@
     @endif
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/sidebars.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    
 </body>
 <livewire:scripts>
     <script>

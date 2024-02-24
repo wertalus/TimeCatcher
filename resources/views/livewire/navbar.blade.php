@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm sticky-top" style="position: fixed; width:100%; height:50px">
+<nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm sticky-top" style="height:50px">
     <div class="container">
         <a class="navbar-brand text-white" href="{{ url('/home') }}">
             {{ config('app.name', 'Time Catcher') }}
@@ -45,11 +45,10 @@
                                               document.getElementById('logout-form').submit();">
                                  {{ __('Wyloguj') }}</a></li>
                             </ul>
-                          </div>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
                         </div>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 @endguest
             </ul>

@@ -16,7 +16,7 @@
     <!-- Scripts -->
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="text" href="{{ asset('css/sidebars.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sidebars.css') }}">
     
     <!-- @vite(['resources/css/sidebars.css', 'resources/js/sidebars.js']) -->
     <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
@@ -29,12 +29,23 @@
 </head>
 <body>
     <div id="app">
-        <livewire:navbar/>
-        <livewire:sidebar/>
-        <main class="py-4">    
-            @yield('content')
-        </main>
-        <livewire:footer/>
+
+            <livewire:navbar/>
+
+        <div class="container-fluid mt-1" style="padding-left:0px; height:55rem">
+            <div class="row" style="height:55rem" >
+                <div class="h-100 col-2 col-sm-3">
+                    <livewire:sidebar/>
+                </div>
+                <div class="col" style="height:55rem">
+                    @yield('content')
+                    {{$slot}}
+                </div>
+            </div>
+        </div>
+        <div class="sticky-bottom w-100" style="position: fixed">
+            <livewire:footer/>
+        </div>
     </div>
     @if(Session::has('message'))
     <script>
@@ -48,11 +59,12 @@
                 toastr.success("{{ session('message') }}");
     </script>
     @endif
+
+</body>
+<livewire:scripts>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/sidebars.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
-</body>
-<livewire:scripts>
     <script>
         
         window.addEventListener('show-form', event =>{
