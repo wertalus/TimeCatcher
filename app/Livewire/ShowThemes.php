@@ -22,7 +22,7 @@ class ShowThemes extends Component
         return redirect()->to("/create-theme/$theme_name")->with('theme_name',$theme_name);
     }
 
-    #[Layout('layouts.main')]
+    #[Layout('layouts.main2')]
     public function render()
     {
         return view('livewire.show-themes');
