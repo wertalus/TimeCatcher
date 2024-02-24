@@ -39,7 +39,7 @@
                 </div>
                 <div class="col" style="height:55rem">
                     @yield('content')
-                    {{$slot}}
+                    
                 </div>
             </div>
         </div>
@@ -59,12 +59,12 @@
                 toastr.success("{{ session('message') }}");
     </script>
     @endif
-
-</body>
-<livewire:scripts>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/sidebars.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
+</body>
+<livewire:scripts>
+
     <script>
         
         window.addEventListener('show-form', event =>{
