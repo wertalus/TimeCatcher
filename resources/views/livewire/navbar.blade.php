@@ -3,18 +3,21 @@
         <a class="navbar-brand text-white" href="{{ url('/home') }}">
             {{ config('app.name', 'Time Catcher') }}
         </a>
+        
         <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
+            
         </button>
-
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
 
+
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto ">
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -46,6 +49,7 @@
                                  {{ __('Wyloguj') }}</a></li>
                             </ul>
                         </div>
+
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -53,5 +57,21 @@
                 @endguest
             </ul>
         </div>
+        
     </div>
+    <span style="color: azure" id="demo" class="nav-link  fs-5 mx-4"></span>
 </nav>
+<script>
+    setInterval(myTimer, 100);
+        const days = ["Niedziela","Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota"];
+        const months = ["Styczeń","Luty","Marzec","Kwiecień","Maj","Czerwiec","Lipiec","Sierpień","Wrzesień","Październik","Listopad","Grudzień"];
+        function myTimer() {
+            const d = new Date();
+
+            let day = days[d.getDay()];
+            let month = months[d.getMonth()];
+
+            document.getElementById("demo").innerHTML = day + ', '+ d.getDay() + ' ' + month + ' '+ d.toLocaleTimeString() ;
+        }
+    
+</script>

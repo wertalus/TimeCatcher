@@ -34,7 +34,7 @@
 
         <div class="container-fluid mt-1" style="padding-left:0px; height:55rem">
             <div class="row" style="height:55rem" >
-                <div class="h-100 col-2 col-sm-3">
+                <div class="h-100 col-2 col-sm-2">
                     <livewire:sidebar/>
                 </div>
                 <div class="col" style="height:55rem">

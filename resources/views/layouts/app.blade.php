@@ -34,11 +34,11 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -87,6 +87,19 @@
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/sidebars.js') }}"></script>
+    <script>
+        const days = ["Niedziela","Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota"];
+
+        const d = new Date();
+        let day = days[d.getDay()];
+
+        setInterval(myTimer, 1000);
+        
+        function myTimer() {
+          const d = new Date();
+          document.getElementById("demo").innerHTML = d.toLocaleTimeString()+' '+day;
+        }
+    </script>
 </body>
 
 </html>

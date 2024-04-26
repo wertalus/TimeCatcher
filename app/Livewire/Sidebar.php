@@ -21,7 +21,7 @@ class Sidebar extends Component
 
     public function render()
     {
-        $this->current_time = Carbon::now('Europe/Warsaw')->toTimeString();
+        //$this->current_time = Carbon::now('Europe/Warsaw')->toTimeString();
         return view('livewire.sidebar',['current_time'=>$this->current_time]);
     }
 }

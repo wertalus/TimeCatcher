@@ -33,9 +33,5 @@
         </li>
         <hr>
       </ul>
-      <h5>
-        
-        Czas :{{$current_time}}
-      </h5>
     </div>
   
