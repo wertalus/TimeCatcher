@@ -6,6 +6,11 @@ use App\Livewire\NewTheme;
 use App\Livewire\ShowThemes;
 use App\Livewire\TimeCatcher;
 use App\Livewire\CreateTheme;
+use App\Livewire\MainDashboardView;
+use App\Livewire\NdtBooking;
+use App\Livewire\AddNewDepartment;
+use App\Livewire\AddNewComponent;
+
 
 
 /*
@@ -30,6 +35,10 @@ Route::get('/themes', [App\Http\Controllers\DashboardController::class, 'index']
 Route::get('/create-theme/{theme_name?}', CreateTheme::class)->name('new-theme')->middleware('auth');
 Route::get('/themes-list', ShowThemes::class)->name('theme-list')->middleware('auth');
 Route::get('/time-catcher/{id}', TimeCatcher::class)->name('counter')->middleware('auth');
+Route::get('/home2', MainDashboardView::class)->name('home2')->middleware('auth');
+Route::get('/NDT', NdtBooking::class)->name('NDT')->middleware('auth');
+Route::get('/new_department', AddNewDepartment::class)->name('add_new_department')->middleware('auth');
+Route::get('/new_component', AddNewComponent::class)->name('add_new_component')->middleware('auth');
 
 //Route::get('/create-theme/{theme_name?}', NewTheme::class)->name('new-theme2');
 

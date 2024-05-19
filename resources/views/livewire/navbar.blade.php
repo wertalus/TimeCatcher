@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm sticky-top" style="height:50px">
     <div class="container">
-        <a class="navbar-brand text-white" href="{{ url('/home') }}">
+        <a class="navbar-brand text-white" href="{{ url('/home2') }}">
             {{ config('app.name', 'Time Catcher') }}
         </a>
         
