@@ -79,3 +79,7 @@ main {
 .scrollarea {
   overflow-y: auto;
 }
+
+.table-responsive {
+  overflow-y: visible !important;
+}

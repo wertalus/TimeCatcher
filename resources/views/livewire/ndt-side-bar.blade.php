@@ -26,6 +26,24 @@
         </a>
       </li>
       <li class="nav-item h5">
+        <a href="{{route('add_new_cell')}}" class="nav-link text-white">
+          <i class="bi-alarm"></i>
+          Dodaj nową komórkę produkcyjną
+        </a>
+      </li>
+      <li class="nav-item h5">
+        <a href="{{route('calendar')}}" class="nav-link text-white">
+          <i class="bi-grid"></i>
+          Kalendarz badań
+        </a>
+      </li>      
+      <li class="nav-item h5">
+        <a href="{{route('todo')}}" class="nav-link text-white">
+          <i class="bi-grid"></i>
+          Lista rezerwacji
+        </a>
+      </li>
+      <li class="nav-item h5">
         <a href="#" class="nav-link text-white">
           <i class="bi-grid"></i>
           Ustawienia

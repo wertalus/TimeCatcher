@@ -10,8 +10,9 @@ use App\Livewire\MainDashboardView;
 use App\Livewire\NdtBooking;
 use App\Livewire\AddNewDepartment;
 use App\Livewire\AddNewComponent;
-
-
+use App\Livewire\ScheduleController;
+use App\Livewire\AddNewCellProduction;
+use App\Livewire\Todolist;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,10 @@ Route::get('/home2', MainDashboardView::class)->name('home2')->middleware('auth'
 Route::get('/NDT', NdtBooking::class)->name('NDT')->middleware('auth');
 Route::get('/new_department', AddNewDepartment::class)->name('add_new_department')->middleware('auth');
 Route::get('/new_component', AddNewComponent::class)->name('add_new_component')->middleware('auth');
+Route::get('/calendar', NewTheme::class)->name('calendar')->middleware('auth');
+Route::get('/events', [ScheduleController::class,'getEvents'])->middleware('auth');
+Route::get('/new_cell', AddNewCellProduction::class)->name('add_new_cell')->middleware('auth');
+Route::get('/todo', Todolist::class)->name('todo')->middleware('auth');
 
 //Route::get('/create-theme/{theme_name?}', NewTheme::class)->name('new-theme2');
 

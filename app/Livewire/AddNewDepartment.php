@@ -6,8 +6,8 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\Department;
 use Illuminate\Http\Request;
+use Livewire\Attributes\Locked;
 
-#[Layout('layouts.NDT')]
 class AddNewDepartment extends Component
 {
 
@@ -50,6 +50,7 @@ class AddNewDepartment extends Component
         $delete->delete();
         $this->redirectRoute('add_new_department');
     }
+    
 
     public function Store()
     {
@@ -64,8 +65,7 @@ class AddNewDepartment extends Component
         $this->redirectRoute('add_new_department');
     }
 
-
-
+    #[Layout('layouts.NDT')]
     public function render()
     {
         return view('livewire.add-new-department');
