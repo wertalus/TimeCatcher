@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('components', function (Blueprint $table) {
+        Schema::create('ndt_lists', function (Blueprint $table) {
             $table->id();
-            $table->string('component_name');
-            $table->foreignId('department_id')->constrained();
+            $table->string('name');
+            $table->string('surname');
+            $table->integer('mobile')->unique();
+            $table->integer('email')->unique();
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('components');
+        Schema::dropIfExists('ndt_lists');
     }
 };
