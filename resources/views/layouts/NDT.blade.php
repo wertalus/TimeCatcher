@@ -46,8 +46,7 @@
 <body>
     <div id="app">
 
-            <livewire:navbar/>
-
+        <livewire:navbar/>
         <div class="container-fluid mt-1" style="padding-left:0px; height:55rem">
             <div class="row" style="height:55rem" >
                 <div class="h-100 col-2 col-sm-auto p-0">
