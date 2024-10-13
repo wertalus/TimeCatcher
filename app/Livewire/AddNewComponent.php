@@ -31,7 +31,7 @@ class AddNewComponent extends Component
             'department_id' => 'required',
             'cell_id' => 'required',
             'duration' =>'required|integer',
-            'update_name' => 'required|min:3'
+            //'update_name' => 'required|min:3'
         ];
     }
 

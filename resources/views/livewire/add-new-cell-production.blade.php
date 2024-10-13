@@ -35,7 +35,7 @@
             <form wire:submit.prevent="Store()">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="form">Podaj nazwę komórki produkcyjnej</h1>
+                        <h1 class="modal-title fs-5">Podaj nazwę komórki produkcyjnej</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -66,7 +66,7 @@
             <form wire:submit.prevent="Update">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="form">Podaj nazwę komórki produkcyjnej</h1>
+                        <h1 class="modal-title fs-5">Podaj nazwę komórki produkcyjnej</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -88,7 +88,7 @@
             <form wire:submit.prevent="Delete">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="form">Usuwanie komórki produkcyjnej</h1>
+                        <h1 class="modal-title fs-5">Usuwanie komórki produkcyjnej</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
