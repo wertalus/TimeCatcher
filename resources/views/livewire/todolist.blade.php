@@ -113,7 +113,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" style="width:190px">Status badania : </span>
-                            <select class="form-select form-control" id="inputGroupSelect01" wire:model.change = 'current_status'>
+                            <select class="form-select form-control" id="inputGroupSelect01" wire:model.change = 'status'>
                                 @foreach ($status as $status)
                                     @if ($status->status_name == $current_status)
                                         <option selected value="{{$status->status_name}}">{{$status->status_name}}</option>

@@ -90,7 +90,7 @@
     <script>
         const days = ["Niedziela","Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota"];
 
-        let d = new Date();
+        const d = new Date();
         let day = days[d.getDay()];
 
         setInterval(myTimer, 1000);

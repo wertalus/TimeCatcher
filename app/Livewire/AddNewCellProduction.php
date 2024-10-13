@@ -7,12 +7,11 @@ use App\Models\Cell;
 use App\Models\Department;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
-use Livewire\Attributes\On;
 
 class AddNewCellProduction extends Component
 {
     
-    public $departments, $cells, $cell_id, $update_name;
+    public $departments, $cells, $cell_id,    $update_name;
     
     
 
